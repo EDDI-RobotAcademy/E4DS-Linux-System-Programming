@@ -3,12 +3,14 @@
 #include <fcntl.h>
 #include <stdio.h>
 
+#define BUDDY_PAGE_SIZE			4096
+
 int main(int argc, char **argv)
 {
 	int ret, fd;
 	char buf[BUDDY_PAGE_SIZE] = "입력을 리다이렉션 합니다.";
 
-	if ((fd = open("dup.txt", O_RDONLY)) == -1)
+	if ((fd = open("dup.txt", O_RDWR)) == -1)
     {
         exit(1);
     }
@@ -16,7 +18,8 @@ int main(int argc, char **argv)
 	close(0);
 	dup(fd);
 
-	puts(buf);
+	read(fd, buf, sizeof(buf));
+	printf("buf = %s", buf);
 
 	close(fd);
 

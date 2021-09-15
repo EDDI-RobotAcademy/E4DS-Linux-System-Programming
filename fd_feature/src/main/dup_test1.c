@@ -3,6 +3,8 @@
 #include <fcntl.h>
 #include <stdio.h>
 
+#define BUDDY_PAGE_SIZE			4096
+
 int main(int argc, char **argv)
 {
 	int ret, fd;
