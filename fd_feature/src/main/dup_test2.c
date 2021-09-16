@@ -15,10 +15,12 @@ int main(int argc, char **argv)
         exit(1);
     }
 
+#if 1
 	close(0);
 	dup(fd);
-
 	read(fd, buf, sizeof(buf));
+#endif
+
 	printf("buf = %s", buf);
 
 	close(fd);

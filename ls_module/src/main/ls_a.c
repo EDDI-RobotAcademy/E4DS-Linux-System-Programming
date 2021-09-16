@@ -6,7 +6,7 @@
 int main(int argc, char **argv)
 {
 	DIR *dp;
-	int i, cmd;
+	int i = 0, cmd;
 	struct dirent *p;
 
 	cmd = getopt(argc, argv, "a");
