@@ -7,6 +7,7 @@ jmp_buf env;
 
 void test(void)
 {
+	printf("void test(void)\n");
 	longjmp(env, 1);
 }
 

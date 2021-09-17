@@ -23,7 +23,8 @@ void use_chance(int signo)
 {
 	chance--;
 
-	if (!chance)
+	// -1 = 0xffffffff -> not 0xffffffff == 0
+	if (chance <= 0)
 	{
 		printf("\nGame Over!\n");
 		exit(0);
@@ -156,6 +157,12 @@ void start_hangman(void)
 		if (!strncmp(hangman_string, matching_string, len))
 		{
 			printf("You Win\n");
+			break;
+		}
+
+		if (chance <= 0)
+		{
+			printf("Game Over!\n");
 			break;
 		}
 	}
