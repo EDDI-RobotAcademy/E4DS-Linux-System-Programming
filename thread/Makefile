@@ -12,6 +12,8 @@ PTHREAD_TEST3 = $(MAIN)/pthread_test3
 PTHREAD_TEST4 = $(MAIN)/pthread_test4
 NONTHREAD_INTEGRAL = $(MAIN)/nonthread_integral
 PTHREAD_INTEGRAL = $(MAIN)/pthread_integral
+NONTHREAD_INTEGRAL_FIX = $(MAIN)/nonthread_integral_fix
+PTHREAD_INTEGRAL_FIX = $(MAIN)/pthread_integral_fix
 
 SUBDIRS = $(FILE) $(IPC)
 
@@ -23,6 +25,8 @@ all:	main
 	$(shell cp $(PTHREAD_TEST3) ./build/)
 	$(shell cp $(PTHREAD_TEST4) ./build/)
 	$(shell cp $(NONTHREAD_INTEGRAL) ./build/)
+	$(shell cp $(PTHREAD_INTEGRAL_FIX) ./build/)
+	$(shell cp $(NONTHREAD_INTEGRAL_FIX) ./build/)
 	$(shell cp $(PTHREAD_INTEGRAL) ./build/)
 
 main:	_all

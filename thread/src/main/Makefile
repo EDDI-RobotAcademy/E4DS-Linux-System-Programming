@@ -13,7 +13,7 @@ LIBS = -lpthread
 
 OBJS = $(SRCS:%.c=%.o)
 
-TARGET = pthread_test pthread_test2 pthread_test3 pthread_test4 nonthread_integral pthread_integral
+TARGET = pthread_test pthread_test2 pthread_test3 pthread_test4 nonthread_integral pthread_integral nonthread_integral_fix pthread_integral_fix
 
 FILE_CONTROL_DIR = $(PWD)/../file
 IPC_DIR = $(PWD)/../ipc
@@ -48,6 +48,14 @@ nonthread_integral:	nonthread_integral.o
 	$(CC) -o $@ $< $(IPC_OBJS) $(LIBS)
 
 pthread_integral:	pthread_integral.o
+	@echo "$<"
+	$(CC) -o $@ $< $(IPC_OBJS) $(LIBS)
+
+nonthread_integral_fix:	nonthread_integral_fix.o
+	@echo "$<"
+	$(CC) -o $@ $< $(IPC_OBJS) $(LIBS)
+
+pthread_integral_fix:	pthread_integral_fix.o
 	@echo "$<"
 	$(CC) -o $@ $< $(IPC_OBJS) $(LIBS)
 
