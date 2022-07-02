@@ -33,7 +33,7 @@ int main(void)
 		}
 	}
 
-	lseek(fd, (off_t)0, SEEK_SET);
+	//lseek(fd, (off_t)0, SEEK_SET);
 	newpos = lseek(fd, (off_t)0, SEEK_END);
 	printf("file size = %ld\n", newpos);
 

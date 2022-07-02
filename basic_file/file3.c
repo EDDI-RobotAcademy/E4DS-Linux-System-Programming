@@ -15,7 +15,7 @@ int main(void)
 {
 	int fd, buf_len;
 	ssize_t nread;
-	char buf[BUDDY_PAGE_SIZE] = "test\n";
+	char buf[BUDDY_PAGE_SIZE] = "";
 
 	fd = open("file_test.txt", O_RDONLY);
 

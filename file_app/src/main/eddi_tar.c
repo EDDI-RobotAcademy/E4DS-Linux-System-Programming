@@ -4,6 +4,9 @@
 #include <fcntl.h>
 #include <stdio.h>
 
+#define SLAB_CACHE			64
+#define BUDDY_PAGE_SIZE		4096
+
 typedef struct
 {
 	char name[SLAB_CACHE];

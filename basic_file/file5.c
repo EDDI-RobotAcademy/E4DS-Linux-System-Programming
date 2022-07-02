@@ -31,7 +31,7 @@ int main(void)
 
 	printf("fd = %d, buf = %s", fd, buf);
 
-	lseek(fd, (off_t)0, SEEK_SET);
+	//lseek(fd, (off_t)0, SEEK_SET);
 
 	while ((nread = read(fd, buf, BUDDY_PAGE_SIZE)) > 0)
 	{

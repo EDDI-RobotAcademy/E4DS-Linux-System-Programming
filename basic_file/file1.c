@@ -21,3 +21,12 @@ int main(void)
 
 	return 0;
 }
+
+// Q: 만약 윈도우에서 유사한 코드를 작성하고자 한다면 ?
+// A: Windows API에 기반하여 코드를 수정해야함
+//    추가적으로 코드 형태는 아래와 같음
+// #ifdef __LINUX_MAC__
+//   open() ~~~
+// #elif __WINDOWS__
+//   WinAPIOpen() // <<<-- API명 요거 아님
+// #endif
