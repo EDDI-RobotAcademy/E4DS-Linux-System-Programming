@@ -2,6 +2,11 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <string.h>
+
+#define BUDDY_PAGE_SIZE			4096
 
 int main(int argc, char **argv)
 {
