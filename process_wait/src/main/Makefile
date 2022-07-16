@@ -13,7 +13,7 @@ LIBS =
 
 OBJS = $(SRCS:%.c=%.o)
 
-TARGET = wait_test1 wait_test2 wait_test3 wait_test4 async_wait
+TARGET = wait_test1 wait_test2 wait_test3 wait_test4 async_wait sync_wait
 
 FILE_CONTROL_DIR = $(PWD)/../file
 
